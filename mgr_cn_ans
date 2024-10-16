@@ -1,0 +1,1468 @@
+Q1. Execute the following commands. Also write its use. [10 Marks]
+a)	Ping
+b)	Who
+c)	hostname
+d)	Traceroute
+e)	Netstat
+
+a)	Ping
+USE : PING (Packet INternet Groper) command is to test connectivity between two nodes. Ping use ICMP(Internet Control Message Protocol) to communicate to other devices.
+It checks if a remote host is up,or that network interfaces can be reached. You can ping host name of ip address.
+EX : 1) [root@localhost]#ping 192.168.26.100 2)[root@localhost]#ping www.google.com
+---------------------------------------------------------------------
+
+b)	Who
+USE: It displays following information for each user currently logged in to the system: Login name of the users
+Terminal line numbers
+Login time of the users in to system Remote host name of the user
+
+EX:	1) [root@localhost]#who
+--------------------------------------------------------------------------------
+
+c)	hostname
+USE: A hostname is a name that is given to a computer that attached to the network that uniquely identifies over a network and thus allows it to be accessed without using its IP address.
+Options:
+i – display ip address of hostname
+I - establishes all configured network
+interfaces and shows all network addresses of the host
+
+EX:		1) [root@localhost]#hostname 2)[root@localhost]# hostname i 3)[root@localhost]# hostname I
+-----------------------------------------------------------------
+
+d)	Traceroute
+USE: This command is used to get the route of a packet, i.e it is used to determine the path along which a packet travels.
+It also returns the number of hops taken by the packet to reach the destination
+
+EX:root@localhost]#traceroute google.com
+-------------------------------------------------------------------------------------------
+ 
+e)	Netstat
+USE:Network Statistics is the command that is used to display routing table, connection information, the status of ports,etc.
+
+EX:[root@localhost]#netstat
+---------------------------------------------------------------------------------------
+
+f)	nmap
+USE:It produce information about the given host
+
+EX:[root@localhost]#nmap 192.168.20.4
+---------------------------------------------------------------------------------------
+
+g)	nslookup
+USE:This command queries the DNS in order to fetch the IP address or the domain name from DNS records
+
+EX:[root@localhost]#nslookupfacebook.com
+
+-----------------------------------------------------------------------------------------
+ 
+Q2. Write the HTML code to display list of any three car companies. For each company display list car models as ordered list. Display car model as hyperlink. On click of car model it should display an image of that car in another window.
+(Create separate HTML page for each car model which will display an image.) [20 Marks]
+<!—main html page-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Models</title>
+</head>
+<body>
+<h1>Car Companies</h1>
+<ul>
+<li>
+<h2>Company 1</h2>
+<ol>
+<li><a href="comp1a.html" target="_blank">Car Model 1</a></li>
+<li><a href="comp1b.html" target="_blank">Car Model 2</a></li>
+<li><a href="comp1c.html" target="_blank">Car Model 3</a></li>
+</ol>
+</li>
+<li>
+<h2>Company 2</h2>
+<ol>
+<li><a href="comp2a.html" target="_blank">Car Model 1</a></li>
+<li><a href="comp2b.html" target="_blank">Car Model 2</a></li>
+<li><a href="comp2c.html" target="_blank">Car Model 3</a></li>
+</ol>
+</li>
+<li>
+<h2>Company 3</h2>
+<ol>
+<li><a href="comp3a.html" target="_blank">Car Model 1</a></li>
+<li><a href="comp3b.html" target="_blank">Car Model 2</a></li>
+<li><a href="comp3c.html" target="_blank">Car Model 3</a></li>
+</ol>
+</li>
+</ul>
+</body>
+</html>
+ 
+//For each car model, create a separate HTML page (e.g., comp1a.html, comp1b.html, comp1c.html) that displays the image of the respective car
+
+//code for Creating separate HTML pages for car models
+
+1)	code for comp1a.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Model 1</title>
+</head>
+<body>
+<h1>Car Model 1</h1>
+<img src="PATH/comp1a.jpg" alt="Car Model 1">
+</body>
+</html>
+
+2)	code for comp1b.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Model 2</title>
+</head>
+<body>
+<h1>Car Model 2</h1>
+<img src="PATH/comp1b.jpg" alt="Car Model 1">
+</body>
+</html>
+
+3)	code for comp1c.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Model 3</title>
+</head>
+<body>
+<h1>Car Model 1</h1>
+<img src="PATH/comp1c.jpg" alt="Car Model 3">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+OR
+ 
+Q2. Write a JavaScript program for accepting name and mobile number from user and perform following validation: [20 Marks]
+a)	Check all fields should not contain a null value b) Check name field contains only alphabets
+c) Mobile No. field should be of 10 digits long.
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+</head>
+<body>
+<h2>Form Validation</h2>
+<form id="myForm">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br><br>
+
+<label for="mobile">Mobile Number:</label>
+<input type="text" id="mobile" name="mobile" required><br><br>
+
+<input type="submit" value="Submit" onclick="validateForm(event);">
+</form>
+<script>
+function validateForm(event) {
+event.preventDefault(); // Prevent the default form submission
+
+// Get the values of name and mobile number fields
+var name = document.getElementById("name").value; var mobile = document.getElementById("mobile").value;
+
+// Check for null values if (!name || !mobile) {
+alert("Please fill in all fields."); return;
+}
+// Check if the name contains only letters if (!/^[a-zA-Z]+$/.test(name)) {
+alert("Name should contain only letters."); return;
+}
+// Check if the mobile number is exactly 10 digits long and contains only numbers if (mobile.length !== 10 || isNaN(mobile)) {
+alert("Mobile number should be 10 digits long and contain only numbers."); return;
+ 
+
+
+
+fields
+}
+ 
+}
+// If all validations pass, you can submit the form programmatically alert("Form submitted successfully!");
+document.getElementById("myForm").reset(); // Reset the form to clear the input
+ 
+</script>
+</body>
+</html>
+ 
+Slip 2 Q1. Write HTML code to display the rainbow color names using Ordered List.
+Modify the
+code to display each color name with the same color of rainbow using font tag. Apply page background color as black. [10 Marks]
+
+<!DOCTYPE html>
+<html>
+<head><title> RAINBOW COLORS</title></head>
+<body bgcolor="black">
+<ol>
+<font size="6" color="red"><li>Red</li></font>
+<font size="6" color="orange"><li>Orange</li></font>
+<font size="6" color="yellow"><li>Yellow</li></font>
+<font size="6" color="green"><li>Green</li></font>
+<font size="6" color="blue"><li>Blue</li></font>
+<font size="6" color="indigo"><li>Indigo</li></font>
+<font size="6" color="violet"><li>Violet</li></font>
+</ol>
+</body>
+</html>
+
+
+ 
+Q2. Write HTML code to generate the following output: [20 Marks]
+ 
+//frame1
+<html>
+<head> <title> frame1</title> </head>
+<body>
+<h1>This is a header:</h1>
+</body>
+</html>
+------------------------------------
+//frame2
+<html>
+<head><title>frame2</title></head>
+<body>
+<small>Look in the box at the right for some information</small>
+</body>
+</html>
+---------------------------------------------------------------
+//frame3
+<html>
+<head><title>frame3</title></head>
+<body>
+<small><align="left">Here is some information</align></small>
+</body>
+</html>
+--------------------------------------------------
+//frame4
+<html>
+<head> <title> frame4</title> </head>
+<body>
+<h1>This is a footer:</h1>
+</body>
+</html>
+-------------------------------------------------------
+//main function
+<html>
+<head><title>DILIP MAGAR</TITLE></head>
+<frameset rows = "25%, 50%, *">
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set a\q1\f1.html"/>
+<frameset cols="20%,*">
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set a\q1\f2.html"/>
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set a\q1\f3.html"/>
+</frameset>
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set a\q1\f4.html"/>
+</frameset>
+</html>
+ 
+OR
+Q2. Write a JavaScript code to calculate maximum, minimum, sum and average of numbers
+in an array. [20 Marks]
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript calculation</title>
+</head>
+<body>
+<script>
+function calculate(numbers)
+{
+if (numbers.length === 0)
+{
+return
+{
+maximum: null, minimum: null, sum: 0, average: null,
+};
+}
+
+var maximum = numbers[0]; var minimum = numbers[0]; var sum = 0;
+
+for (var i = 0; i < numbers.length; i++)
+{
+sum += numbers[i];
+if (numbers[i] > maximum) maximum = numbers[i];
+if (numbers[i] < minimum) minimum = numbers[i];
+}
+
+var average = sum / numbers.length;
+return { maximum, minimum, sum, average };
+}
+var numbers = new Array(5, 10, 15, 20, 25); var result = calculate(numbers);
+//result.maximum accesses the maximum value from the object document.write("Maximum: " + result.maximum + "<br>"); document.write("Minimum: " + result.minimum + "<br>"); document.write("Sum: " + result.sum + "<br>"); document.write("Average: " + result.average + "<br>");
+
+</script>
+</body>
+</html>
+ 
+Slip 3 Q1. Write HTML code for the following: [10 Marks]
+a)	Display following polynomial expression:
+
+15X4 + 9X3 + 4X2 + 2X + 4 = 0
+Display coefficient in Bold.
+
+<html>
+<head>
+<title> Q1 </title>
+</head>
+<body>
+
+<p><b>15</b>X<sup>4</sup>+<b>9</b>X<sup>3</sup>+<b>4</b>X<sup>2</sup>+<b>2
+</b>X+<b>4</b>=0</p>
+</body>
+</html>
+
+b)	Display the text message as “S.Y.B.C.A. (Science)” at center with different heading styles in different colors.
+
+<html>
+<head>
+</head>
+<body><center>
+<h1> <font color="red"> S.Y.B.C.A. (Science) </font></h1>
+<h2> <font color="blue"> S.Y.B.C.A. (Science)</font> </h2>
+<h3> <font color="green"> S.Y.B.C.A. (Science)</font> </h3>
+<h4> <font color="yellow"> S.Y.B.C.A. (Science) </font> </h4>
+<h5> <font color="pink"> S.Y.B.C.A. (Science)</font> </h5>
+<h6> <font color="red"> S.Y.B.C.A. (Science)</font> </h6>
+</center></body>
+</html>
+
+ 
+Q2. Write HTML code to divide the frame into different sections as shown below and add appropriate html files to each frame. [20 Marks]
+
+//frame 1
+<html>
+<head><title>frame1</title></head>
+<body>
+<h4>First Frame:DILIP MAGAR ADDRESS: PACHORA , JALGAON</h4>
+</body>
+</html>
+------------------------------------------------------------------
+//frame 2
+<HTML>
+<head><title>frame2</title></head>
+<body>
+<h4>Second Frame: Bulleted list of Qualifications</h4>
+<ul type="disc">
+<li>Ph.D</li>
+<li>BBA</li>
+<li>BCA</li>
+<li>MCA</li>
+</ul>
+</body>
+</html>
+
+-------------------------------------------------------------------
+//frame 3
+<html>
+<head><title>frame3</title></head>
+<body>
+<h4>Third Frame:link to fav sites</h4>
+<a href="https://www.youtube.com" traget="_blank">YOUTUBE</a>
+</body>
+</html>
+
+--------------------------------------------------------------------=
+//frame 4
+<html>
+<head><title>frame4</title></head>
+<body>
+<h4>Fourth Frame:scrolling message</h4>
+
+<marquee>DILIP MAGAR</MARQUEE>
+</body>
+</html>
+ 
+----------------------------------------------------------------------
+//frame 5
+<html>
+<head><title>frame5</title></head>
+<body>
+<h4>Fifth Frame: Blinking reminder</h4>
+<blink> reminder</blink>
+</body>
+</html>
+
+-------------------------------------------------------------------
+//frame 6
+<html>
+<head><title>frame6</title></head>
+<body>
+<h4>Sixth Frame:IMAGE</h4>
+<IMG src =""C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\mgr.png"/>
+</body>
+</html>
+--------------------------------------------------------------------------------
+//main_html_page
+<html>
+<head><title>ASSIGNMENT6 SET A q2 COMBINE</TITLE></head>
+<frameset rows = "33%, 33%, *">
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\f1.html"/>
+<frameset cols="50%,*">
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\f2.html"/>
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\f3.html"/>
+</frameset>
+<frameset cols = "33%, 33%, *">
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\f4.html"/>
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\f5.html"/>
+<frame src="C:\Users\dilip\OneDrive\Documents\cnwp_solving\assignment6\set b\f6.html"/>
+</frameset>
+</frameset>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+OR
+ 
+
+Q2. Write a JavaScript program to display a Multiplication table in tabular format using function. [20 Marks]
+ 
+Slip 4 Q.1. Create HTML page with following specifications [10 Marks]
+a)	Title should be about myCity
+b)	Place your City name at the top of the page in large text and in blue color
+c)	Add names of landmarks in your city each in a different color, style and typeface d.
+d)	One of the landmark, your college name should be blinking.
+e)	Add scrolling text with a message of your choice.
+
+<html>
+<head> <title> MY CITY </title> </head>
+<body>
+<center>
+<h1> <font color="blue">NASHIK</font></h1>
+</center>
+<h2> Landmarks</h2><br>
+<h3> <font color="red"> 1.Shri kalaram Temple</font> </h3>
+<h3> <font color="blue"> 2.Ramkund</font> </h3>
+<h3> <font color="yellow"> 3.Ved mandir</font> </h3>
+<h3> <font color="pink">4.Sula</font> </h3>
+<blink>
+<h3> <font color="green">5.K.T.H.M College Nashik </font> </h3>
+</blink>
+<marquee>
+<h2> Your choice</h2>
+</marquee>
+</body>
+</html>
+
+
+ 
+Q2. Write HTML code to generate the following output: [20 Marks]
+ 
+OR
+
+Q2. Write a JavaScript function to validate email-id using regular expression. [20 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Email Validation</title>
+</head>
+<body>
+<form>
+<label for="email">Email:</label>
+<input type="text" id="email">
+<input type="button" value="Submit" onclick="ValidateEmail(document.getElementById('email'))">
+</form>
+
+<script>
+// The provided email validation function function ValidateEmail(uemail) {
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; if (uemail.value.match(mailformat)) {
+alert('Email is valid. Submitting the form.'); uemail.value = ''; // Clear the input field
+} else {
+alert("You have entered an invalid email address!"); uemail.focus();
+}
+}
+</script>
+</body>
+</html>
+ 
+/*To remember the regular expression /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, you can break it down into smaller parts and understand what each component means:
+
+^: This asserts the start of the string.
+\w+: This matches one or more word characters (letters, digits, or underscores).
+([\.-]?\w+)*: This captures a group that can appear zero or more times. It consists of an optional dot or hyphen, followed by one or more word characters.
+@: This matches the at symbol "@".
+\w+: This matches one or more word characters.
+([\.-]?\w+)*: This captures a group, similar to #3, for the domain part of the email. (\.\w{2,3})+: This captures a group for the top-level domain (TLD), such as ".com" or ".co.uk". It matches a period followed by 2 or 3 word characters, and this group can appear one or more times.
+$: This asserts the end of the string.
+Here's a breakdown of what this regular expression is typically used for:
+
+It's commonly used to validate email addresses to ensure they follow a basic structure. It checks that an email address starts with one or more word characters, followed by an "@" symbol, and then followed by a domain part that can include optional dot or hyphen characters and more word characters.
+Finally, it checks for a TLD with 2 or 3 characters at the end.*/
+ 
+Slip 5 Q1. Create HTML page with all the different text styles (bold, italic and underlined) and its
+combinations on separate lines. State style of each line in its text. [10 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Styles</title>
+</head>
+<body>
+<p><b>This line is in bold form</b>.</p>
+<p><i>This line is in italic form</i>.</p>
+<p><u>This line is in underlined</u>.</p>
+
+<p><b><i>This line is both bold and italic</i></b>.</p>
+<p><b><u> This line is both Bold and Underlined form</u></b>.</p>
+<p><i><u> This line is both Italic and Underlined form </u></i>.</p>
+
+<p><b><i><u>This line is Bold, Italic, and Underlined Text</u></i></b>.</p>
+</body>
+</html>
+
+
+ 
+Q2. Write HTML code to generate the following output: [20 Marks]
+
+<html>
+<body>
+<form border =3 method="post" action="">
+<br>
+<center>
+<h2><b> Feedback Form </b></h2>
+<h4>Student Name:<input type="text"></input>
+<h4>Student E-Mail:<input type="email"></input><br>
+<h4>How do you know this Institute:
+<select id="dilip" name="Institute">
+<option value="management">Through College Management</option>
+<option value="Friend">Through Friends</option>
+<option value="Relatives">Through Relatives</option>
+<option value="Internet">Through Internet</option>
+</select>
+
+<h4> How do you rate the faculty:
+<input type="radio" name="rate" value="Poor" >poor
+<input type="radio" name="rate" value="Good" >Good
+<input type="radio" name="rate" value="Very Good" >Very Good
+<input type="radio" name="rate" value="Excellent" checked >Excellent
+
+<h4>Suggestions for the betterment of faculty and institute:</h4>
+<textarea name="suggestion" rows=6 cols=40> </textarea> <br><br>
+
+<input type="submit" value="Send" >
+<input type="submit" value="Clear" >
+</center>
+</form>
+</body>
+</html>
+ 
+OR
+
+Q2. Write a JavaScript program to print the reverse of a number. [20 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reverse Number</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function reverseNumber(number) { var reversed = 0;
+
+while (number > 0) {
+var rem = number % 10; // Store the remainder in the variable rem reversed = reversed * 10 + rem;
+number = Math.floor(number / 10);
+}
+
+return reversed;
+}
+
+var inputNumber = prompt("Enter a number:"); // Prompt the user for input inputNumber = parseInt(inputNumber); // Convert the input to an integer
+
+var reversed = reverseNumber(inputNumber);
+
+document.write("Original Number: " + inputNumber + "<br>"); document.write("Reversed Number: " + reversed);
+
+</script>
+</body>
+</html>
+
+
+/*In the code examples I provided, Math.floor is used to ensure that the result of the division is an integer. When you perform integer division in JavaScript using the / operator, it can sometimes produce a floating-point number, especially if the dividend is not evenly divisible by the divisor.
+
+Using Math.floor ensures that the result of the division is truncated to the nearest lower integer, effectively simulating integer division. This is important when you're reversing a number digit by digit because you want to deal with integers, not floating-point numbers.
+
+Here's a brief explanation:
+ 
+If you don't use Math.floor, you might encounter unexpected behavior when dividing numbers. For example, 7 / 2 would yield 3.5, and you would want to avoid fractions when reversing digits.
+
+By using Math.floor, 7 / 2 becomes 3, which is the integer part of the division result, and that's what you typically want when reversing digits.
+
+So, using Math.floor ensures that the division results in integers, which is crucial when reversing the digits of a number.*/
+ 
+Slip 6 Q1 Create HTML page with following specifications: [10 Marks]
+a)	The Background colour should be green.
+b)	The text colour should be red.
+c)	The heading should be large in size as ‘My Assignment’.
+d)	Display a horizontal line after heading.
+e)	Display your name in Bold, address in Italics and year as S.Y
+
+<html>
+<head>
+<style> body{
+background-color:green;
+}
+</style>
+</head>
+<body>
+<center>
+<h1> <font color="red"/> My Assingnmet</h1>
+</center>
+<hr>
+<b> <font color="red" /> Name:MAGAR DILIP BALU </b><br>
+<i> <font color="red" />Address:AT. BANOTI , DIST: C.SAMBAJINAGAR, 431150</i><br>
+<i> <font color="red" />Year:SY</i><br>
+</body>
+</html>
+
+ 
+
+Q2. Write HTML code to generate the following output: [20 Marks]
+
+<html>
+<body>
+<form border =3 method="post" action="">
+<br>
+<center>
+<h4>Enter Your Name:<input type="text"></input><br>
+<h4>Enter Your Password:<input type="text"></input><br>
+<h4>Which of the following Operating System you need?<br></br>
+
+<input type="checkbox" name="OS" value="Linux" checked >LINUX
+<input type="checkbox" name="window" value="WINDOWS XP" checked>WINDOWS XP
+<input type="checkbox" name="mac" value="Macintosh 8.0" >Macintosh 8.0
+
+<h4>Which Operating System do you like the best?<br>
+<input type="radio" name="OS" value="Linux" >LINUX
+<input type="radio" name="OS" value="WINDOWS XP" checked >WINDOWS XP
+<input type="radio" name="OS" value="Macintosh 8.0" >Macintosh 8.0
+
+<h4>YOU HAVE COMPLETED THE FORM
+
+<input type="submit" value="Submit" >
+</center>
+</form>
+</body>
+</html>
+
+
+OR
+ 
+Q2. Write a JavaScript program to accept a number from user and display that number in words (e.g. 226 Two Two Six) [20 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convert Number to Words</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var inputNumber = prompt("Enter a number:"); // Prompt the user for input if (!isNaN(inputNumber))
+{
+if (inputNumber === '0') { document.write("Zero");
+}
+else {
+var words = convertNumberToWords(inputNumber); document.write(inputNumber + " is " + words);
+}
+}
+else {
+document.write("Invalid input. Please enter a valid number.");
+}
+
+
+
+
+
+
+function convertNumberToWords(number) { var words = new Array();
+
+// Convert the number to words while (number > 0) {
+var digit = number % 10; words.push(convertDigitToWord(digit)); number = Math.floor(number / 10);
+}
+
+return words.reverse().join(" ");// value store as 226 then six two two but
+}	//we use reverse() then two two six is display
+ 
+function convertDigitToWord(digit) { switch (digit) {
+case 0:
+return "Zero"; case 1:
+return "One"; case 2:
+return "Two"; case 3:
+return "Three"; case 4:
+return "Four"; case 5:
+return "Five"; case 6:
+return "Six"; case 7:
+return "Seven"; case 8:
+return "Eight"; case 9:
+return "Nine"; default:
+return "";
+}
+}
+
+</script>
+</body>
+</html>
+ 
+slip 7 Q1)write html script with internal css to display following screen
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<div style="border: 1px solid #cccccc;"> This is the first text
+
+<div style="border: 2px solid red;"> This is box 1
+</div>
+<div style="clear: left;"></div>
+<div style="border: 2px solid green;"> This is box 2
+</div>
+This is the last text
+</div>
+</body>
+</html>
+
+
+/The use of the clear: left; property in the empty <div> between "Box 1" and "Box 2" is to prevent "Box 2" from appearing next to "Box 1."
+//This creates a line break, making "Box 2" appear below "Box 1."
+ 
+Q2. Write HTML script to generate following screen: [20 Marks] (On clinking on the hyperlink, display separate HTML page)
+ 
+OR
+
+
+Q2. Write a JavaScript program to print factorial of a given number. [20 Marks]
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factorial Calculator</title>
+</head>
+<body>
+<script>
+
+// Prompt the user for input
+var number = prompt("Enter a number to calculate its factorial:");
+
+if (!isNaN(number)) {
+var factorial = calculateFactorial(number);
+document.write("The factorial of " + number + " is " + factorial);
+} else {
+document.write("Invalid input. Please enter a valid number.");
+}
+
+// Function to calculate the factorial of a number function calculateFactorial(number) {
+if (number < 0) {
+return "Factorial is not defined for negative numbers.";
+}
+if (number === '0' || number === '1') { return 1;
+}
+
+var factorial = 1;
+for (var i = 2; i <= number; i++) { factorial *= i;
+}
+
+return factorial;
+}
+
+</script>
+</body>
+</html>
+ 
+Slip 8 Q.1 Execute the following commands. Also write its use. [10 Marks] repeat
+
+Q2. Write HTML code to generate the following output and display each element of list in different size, color & font. Use internal CSS to format the list. [20 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> body {
+border: 2px solid black; /* Add a border to the entire body content */ padding: 0.5px; /* Add padding for better appearance */
+}
+ul {
+color: yellow;
+font-family: Arial; font-size: 20pt;
+}
+
+ol {
+color: green;
+font-family: Arial; font-size: 20pt;
+}
+
+li.Fern { color: blue;
+font-family: 'Times New Roman', Times, serif; font-size: 24pt;
+}
+
+li.Spore { color: red;
+font-family: 'Verdana', sans-serif; font-size: 18pt;
+}
+
+li.Lilly {
+color: purple;
+font-family: 'Georgia', serif; font-size: 22pt;
+}
+ 
+li.Rose {
+color: orange;
+font-family: 'Comic Sans MS', cursive; font-size: 20pt;
+}
+
+li.RED {
+color: red;
+font-family: 'Comic Sans MS', cursive; font-size: 20pt;
+}
+
+li.PINK {
+color: pink;
+font-family: 'Comic Sans MS', cursive; font-size: 20pt;
+}
+
+</style>
+</head>
+<body>
+<ul type="disc">
+<li class="Fern">Non-flowering plants</li>
+<ul type="circle">
+<li class="Fern">Fern</li>
+<li class="Spore">Spore</li>
+</ul>
+<li class="Fern">Flowering plants </li>
+<ul type="square">
+<li class="Lilly">Lilly</li>
+<li class="Rose">Rose</li>
+<ol type="1">
+<li class="RED">Red Rose</li>
+<li class="PINK">Pink Rose</li>
+</ol>
+</ul>
+</ul>
+</body>
+</html>
+ 
+OR
+Q2. Write a JavaScript program to compare the values of password and confirmed password field and display message accordingly. Also perform the validation to check any of the field should not be empty. [20 Marks]
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Login</title>
+<style> body {
+text-align: center; /* Center content horizontally */
+}
+h1 {
+font-size: 30px; font-weight: bold;
+margin-bottom: 1px; /* Add some space below the heading */
+}
+label {
+font-weight: bold;
+display: inline-block; /* Labels to the left of input fields */ width: 150px; /* Fixed width for labels */
+text-align: left; /* Align labels to the left*/
+margin-right: 0px; /* Add space between labels and inputs */
+}
+
+input {
+font-weight: bold; display: inline-block;
+text-align: left; /* Align input fields to the left */ margin: 0;
+}
+button {
+font-weight: bold;
+display: block; /* Display the button on a new line */ margin-left: 180px;
+}
+</style>
+</head>
+ 
+<body>
+<h1>User Login</h1>
+<form id="loginForm">
+<label for="username">Username:</label>
+<input type="text" id="username"><br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password"><br><br>
+
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword">
+
+<button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+const username = document.getElementById('username').value; const password = document.getElementById('password').value;
+const confirmPassword = document.getElementById('confirmPassword').value;
+
+if (username === '' || password === '' || confirmPassword === '') { alert('All fields must be filled out.');
+} else if (password !== confirmPassword) { alert('Password and Confirm Password do not match.');
+} else {
+alert('Form submitted successfully!');
+// Clear the form fields document.getElementById('username').value = ''; document.getElementById('password').value = ''; document.getElementById('confirmPassword').value = '';
+}
+}
+</script>
+</body>
+</html>
+ 
+Slip 9 Q1. Write HTML code to generate the following output SYBCA (Science) Subjects
+I.	Data Structures
+o	Algorithms and analysis of algorithms
+o	Static and dynamic data structures
+II.	Database Management Systems II Advanced SQL features and procedural SQL Concurrency control and crash recovery
+III.	Computer Networks
+	Protocols at various layers in the protocol stacks
+	Techniques for framing, error control, flow control and routing
+
+
+
+<html>
+<head> <title>SYBCA Subject</title>
+<style> body {
+border: 2px solid #000; /* #000 represents black color */ padding: 10px;
+}
+</style>
+</head>
+<body>
+<center><h1>SYBCA(Science) Subject</h1></center><br>
+<ol type="I">
+<li>Data structures
+<ul type="circle">
+<li>Algorithms and analysis of alogrithms</li>
+<li>Static and dynamic data structure</li>
+</ul>
+</li>
+<li> Database Management Systems II
+<ul type="disc">
+<li>Advanced SQL features and procedural SQL </li>
+<li>Concurrency control and creash recovery </li>
+</ul>
+</li>
+<li>Computer Networks
+<ul type="square">
+<li> Protocals at various layers in the protocolstacks</li>
+<li> Techniques for framming,error,control,flow control,and routing </li>
+</ul>
+</li>
+</ol>
+</body>
+</html>
+ 
+ 
+ 
+Q2. Create HTML page giving information about celebrating Dussehra in your country.
+Use various tags in HTML to give it a pleasant look. It should be having following
+links. Create separate HTML page for each link and display the respective information. a)information why it is celebrated
+b)	When it is Celebrated
+c)	What to Do on this day
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dussehra Celebration</title>
+<style>
+body {
+font-family: Arial, sans-serif; background-color: purple; text-align: center;
+padding: 20px;
+}
+h1 {
+color: red;
+}
+p {
+color: orange;
+}
+
+</style>
+</head>
+<body>
+<h1>Welcome to Dussehra Celebration in Our Country</h1>
+<p>Dussehra is a significant Hindu festival celebrated in our country, symbolizing the victory of good over evil. It's a ten-day festival that marks the triumph of Lord Rama over the demon king Ravana.</p>
+<p>Click the links below to learn more:</p>
+<a href="why_dussehra.html">Why it's celebrated</a>
+<a href="when_dussehra.html">When it's celebrated</a>
+<a href="what_to_do.html">What we do on this day</a>
+</body>
+</html>
+
+ 
+//page for why_dussehra.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Why Dussehra is Celebrated</title>
+</head>
+<body>
+<h1>Why Dussehra is Celebrated</h1>
+<p>Dussehra is celebrated to commemorate the victory of Lord Rama over the demon king Ravana, as described in the ancient Indian epic, the Ramayana. It symbolizes the triumph of good over evil and is a time for reflection on the importance of righteousness and virtue.</p>
+<p>The festival also marks the end of the nine-day Navaratri festival, during which goddess Durga is worshiped, and the beginning of the Durga Puja celebrations.</p>
+</body>
+</html>
+//page for when_dussehra.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>When Dussehra is Celebrated</title>
+</head>
+<body>
+<h1>When Dussehra is Celebrated</h1>
+<p>Dussehra is typically celebrated on the tenth day of the lunar calendar month of Ashwin (usually in September or October). The festival extends over ten days, with the grand celebration taking place on the final day.</p>
+<p>Exact dates may vary from year to year, so it's essential to check local calendars for the precise timing of the festival.</p>
+</body>
+</html>
+
+//page for what_to_do.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>What to Do on Dussehra</title>
+</head>
+<body>
+<h1>What to Do on Dussehra</h1>
+<p>On Dussehra, people participate in various cultural and religious activities. These may include:</p>
+<ul>
+<li>Attending Ram Lila performances, reenacting scenes from the Ramayana.</li>
+<li>Visiting temples to offer prayers and seek blessings from the gods.</li>
+<li>Exchanging gifts and sweets with friends and family.</li>
+<li>Lighting lamps and diyas to symbolize the victory of light over darkness.</li>
+<li>Participating in processions and parades that often feature effigies of Ravana being burned.</li>
+</ul>
+</body>
+</html>
+ 
+
+OR
+
+Q2. Write a JavaScript code to greet the user according to the current timing. [20 Marks]
+<!DOCTYPE html>
+<html>
+<head>
+<title>Show good morning good night wish as per time in JavaScript</title>
+</head>
+<body>
+<center>
+<font size="+3" style="color: green;">
+<script type="text/javascript"> var day = new Date();
+var hr = day.getHours(); if (hr >= 0 && hr < 12) {
+document.write("Good Morning!");
+} else if (hr == 12) { document.write("Good Noon!");
+} else if (hr >= 12 && hr <= 17) { document.write("Good Afternoon!");
+} else {
+document.write("Good Evening!");
+}
+</script>
+</font>
+</center>
+</body>
+</html>
+ 
+Slip 10 Q1. Create HTML page with following specifications: [10 Marks]
+a)	Title should be about MYCOLLEGE.
+b)	Put the windows logo image in the background.
+c)	Place your college name at the top of the page in large text followed by address in smaller size.
+d)	Add scrolling text with message of your choice.
+
+<!DOCTYPE html>
+<html>
+<head> <title>My COLLEGE</title>
+</head>
+<body background="path\logo.jpg">
+<center>
+<h1>K.T.H.M College, Nashik</h1>
+<p>Gangapur rode,nashik Pin code:422201</p>
+</center>
+<marquee>Your choice</marquee>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Q2. Write HTML code to display day wise SYBCA time table in tabular format. [20 Marks]
+<html>
+<body>
+<center>
+<h1> SYBCA TIME TABLE</h1>
+<table border=2 cellspacing=2 cellpading=3 color=black>
+<tr align="center">
+<th>TIME</th>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+</tr>
+<tr align="center">
+<td> 11:50-12:35 </td>
+<td> DBMS </td>
+<td> CN </td>
+<td>-</td>
+<td>-</td>
+<td>DS</td>
+<td>DS</td>
+</tr>
+<tr align="center">
+<td>12:35-01.20</td>
+<td>CN </td>
+<td>DBMS</td>
+<td>DBMS</td>
+<td>CN</td>
+<td>CN</td>
+<td>DBMS</td>
+</tr>
+<tr align="center">
+<td>01:30-02.15</td>
+<td>LC</td>
+<td>LC</td>
+<td>DS</td>
+<td>DS</td>
+<td>LC</td>
+<td>LC</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+ 
+OR
+Q2. Write a JavaScript program to read employee details using HTML tags. Calculate and display net salary of an employee. [20 Marks]
+
+ 
+Slip 11 Q1. Execute the following commands. Also write its use. [10 Marks] Repeat
+
+Q2 Write HTML code to generate the following output. Add two more colors in following table. [20 Marks]
+<html>
+<body>
+<center>
+<h1>HTML Colors</h1>
+<table border=1 cellpadding=3 cellspacing=1>
+<tr>
+<th>Color</th>
+<th>Name</th>
+<th>Hexadecimal</th>
+<th>RGB value</th>
+</tr>
+<tr>
+<td bgcolor="salmon"></td>
+<td align=center>Salmon</td>
+<td align=right>FA8072</td>
+<td align=center>250-128-114</td>
+</tr>
+<tr>
+<td bgcolor="gold"></td>
+<td align=center>Gold</td>
+<td align=right>FFD700</td>
+<td align=center>250-215-0</td>
+</tr>
+<tr>
+<td bgcolor="red"></td>
+<td align=center>Red</td>
+<td align=right>FF0000</td>
+<td align=center>255-0-0</td>
+</tr>
+<tr>
+<td bgcolor="green"></td>
+<td align=center> Green</td>
+<td align=right>00FF00</td>
+<td align=center>0-255-0</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+ 
+Red:
+Hexadecimal: #FF0000 RGB: 255-0-0
+Remember the "FF" for full intensity red, and the fact that there is no green or blue, which is why they are both 0.
+
+Lime Green:
+Hexadecimal: #00FF00 RGB: 0-255-0
+"00" for no red, "FF" for full intensity green, and "00" for no blue.
+
+
+OR
+ 
+Q2. Write a menu driven program using JavaScript to find square root, power and absolute value of a given number and validate them. [20 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu-Driven Program</title>
+</head>
+<body>
+<script>
+function main() { var choice;
+
+do {
+choice = parseInt(prompt( "Menu:\n" +
+"1. Find Square Root\n" + "2. Find Power\n" +
+"3. Find Absolute Value\n" + "4. Exit\n\n" +
+"Enter your choice (1/2/3/4):"
+));
+
+switch (choice) { case 1:
+var number = parseFloat(prompt("Enter a number:")); if (!isNaN(number)) {
+if (number >= 0) {
+var result = Math.sqrt(number);
+alert("Square root of " + number + " is: " + result);
+} else {
+alert("Cannot calculate the square root of a negative number.");
+}
+} else {
+alert("Invalid input. Please enter a valid number.");
+}
+break;
+
+case 2:
+var number = parseFloat(prompt("Enter a number:")); if (!isNaN(number)) {
+var exponent = parseFloat(prompt("Enter the exponent:")); if (!isNaN(exponent)) {
+var result = Math.pow(number, exponent);
+alert(number + " raised to the power of " + exponent + " is: " + result);
+} else {
+alert("Invalid input. Please enter a valid exponent.");
+}
+} else {
+alert("Invalid input. Please enter a valid number.");
+}
+break;
+ 
+case 3:
+var number = parseFloat(prompt("Enter a number:")); if (!isNaN(number)) {
+var result = Math.abs(number);
+alert("Absolute value of " + number + " is: " + result);
+} else {
+alert("Invalid input. Please enter a valid number.");
+}
+break;
+
+case 4:
+alert("Exiting the program."); break;
+
+default:
+alert("Invalid choice. Please select a valid option (1/2/3/4).");
+}
+} while (choice !== 4);
+}
+
+main();
+</script>
+</body>
+</html>
+ 
+slip 12 Q.1 Execute the following commands. Also write its use. [10 Marks] Repeat
+
+Q2. Write HTML code to generate the following output: [20 Marks]
+
+<html>
+<body>
+<center>
+<h1>Company wise profit</h1>
+<table border=1 cellpadding=5 cellspacing=0.5>
+<tr>
+<th align=center>Company Name </th>
+<th align=center>Year</th>
+<th align=right>Profit(In Crore) </th>
+</tr>
+<tr>
+<td rowspan="3" align=center>Infosys</td>
+<td align=center>2018</td>
+<td align=right>6520</td>
+</tr>
+<tr>
+<td align=center>2019</td>
+<td align=right>7250</td>
+</tr>
+<tr>
+<td align=center>2020</td>
+<td align=right>7962</td>
+</tr>
+<tr>
+<td rowspan="3" align=center>Wipro</td>
+<td align=center>2018</td>
+<td align=right>1803</td>
+</tr>
+ 
+<tr>
+<td align=center>2019</td>
+<td align=right>1953</td>
+</tr>
+<tr>
+<td align=center>2020</td>
+<td align=right>2529</td>
+</tr>
+<tr>
+<td rowspan="3" align=center>Cognizant</td>
+<td align=center>2018</td>
+<td align=right>5420</td>
+</tr>
+<tr>
+<td align=center>2019</td>
+<td align=right>5863</td>
+</tr>
+<tr>
+<td align=center>2019</td>
+<td align=right>2020</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+ 
+ 
+ 
+Q2. Write a JavaScript Program to read a number from user, store its factors into the array
+and display that array. [20 Marks]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factorization</title>
+</head>
+<body>
+<script type="text/javascript">
+var inputNumber = prompt("Enter a number:"); // Prompt the user for input if (!isNaN(inputNumber)) {
+var number = parseInt(inputNumber);
+
+if (number === 0) {
+document.write("Zero has no factors.");
+} else if (number < 0) {
+document.write("Please enter a positive number.");
+} else {
+var factors = findFactors(number);
+document.write("Factors of " + number + " are: " + factors.join(", "));
+}
+} else {
+document.write("Invalid input. Please enter a valid number.");
+}
+
+function findFactors(number) { var factors = new Array();
+for (var i = 1; i <= number; i++) { if (number % i === 0) {
+factors.push(i);
+}
+}
+return factors;
+}
+
+</script>
+</body>
+</html>
+ 
+Slip 13 Q1. Write HTML code to display names of html text formatting tags and output in tabular format. [10Marks]
+Tag name	Output
+b	Bold
+I	Italic
+U	Underline
+
+<html>
+<body><center>
+<table border=1 cellpadding=10 cellspacing=0.5>
+<tr>
+<th align=center>Tag name </th>
+<th align=center> Output </th>
+</tr>
+<tr>
+<td align=center> b</td>
+<td align=center><b>Bold</b></td>
+</tr>
+<tr>
+<td align=center>I</td>
+<td align=center><i>Italic<i></td>
+</tr>
+<tr>
+<td align=center>U</td>
+<td align=center><u>Underline<u></td>
+</tr>
+</table></center>
+</body>
+</html>
+
+
+
+
+Q2. Write HTML code to generate the following output and display each element of
+list in different size, color & font. Use external CSS to format the list.
+
+repeat
+OR
+Q2. Write a JavaScript function to validate email-id using regular expression. [20 Marks]
+Repeat
+ 
+slip 14 Q1. repeat Q2. Write HTML code to display Product and its subtypes in tabular format. Add more products of your choice in following table. [20Marks]
+
+<html>
+<head> </head>
+<body>
+<table border=2 cellpadding=5 cellspacing=0>
+<tr>
+<th align=center>Sr.No</th>
+<th align=left>Product Name</th>
+<th align=center>Product subtypes</th>
+</tr>
+<tr>
+<td align=center>1</td>
+<td align=left>Pulses</td>
+<td>
+<ul type=disc>
+<li> Toor Daal</li>
+<li> Moong Daal</li>
+<li> Udad Daal</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td align=center>2</td>
+<td align=left>Everest Masala</td>
+<td>
+<ul type=disc>
+<li> Sambhar Masala</li>
+<li> Pavbhaji Masala</li>
+<li> Kichen King Masala</li>
+</ul>
+</td>
+</tr></table></body></html>
+ 
+ 
+
+OR
+Q2. Write a JavaScript program for accepting name and mobile number from user and perform following validation: [20 Marks]
+repeat
+ 
+Slip 16
+Q1)Write HTML code to display the rainbow color names using Ordered List. Modify the code to display each color name with the same color of rainbow using font tag. Apply page background color as black. {Repeat}
+q2)Write HTML code to generate the following output:
+
+ 
+<html>
+<head> </head>
+<body>
+<marquee>This is an alternative marquee txt</marquee>
+<center>
+This is <i>italized</i><br><br> This is <u>underline</u><br><br> This is <b>bold</b><br><br>
+This is <em>emphasized</em><br><br>
+This is <strong>Strong Text</strong><br><br> This is <s>striked text</s><br><br>
+This is <small>computer code</small><br><br> This is <sup>superscript</sup> Code<br><br> This is <sub>subscript</sub> Code<br><br>
+</center>
+</body>
+</html>
